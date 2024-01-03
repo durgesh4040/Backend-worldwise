@@ -1,0 +1,23 @@
+package com.worldwise.Service;
+
+import java.util.Collections;
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.worldwise.Entity.LoginEntity;
+import com.worldwise.Repository.City;
+
+public class CityService {
+@Autowired
+private LoginService loginService;
+
+@Autowired 
+private City cityRepository;
+
+public List<CityEntity> getCitiesByEmail(String email) {
+    Optional<LoginEntity> loginOptional = loginService.getLoginByEmail(email);
+    return loginOptional.map(cityRepository::findByLogin).orElse(Collections.emptyList());
+}
+}
