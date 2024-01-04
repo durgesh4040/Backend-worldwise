@@ -26,7 +26,7 @@ import com.worldwise.Service.LoginService;
 
 @RestController
 
-@CrossOrigin(origins = "https://durgesh4040.github.io/frontend-worlwise")
+@CrossOrigin(origins = {"https://durgesh4040.github.io/frontend-worlwise","http://localhost:5173"})
 public class Controller {
 	@Autowired
 	private Login loginRepo;
