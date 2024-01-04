@@ -26,7 +26,7 @@ import com.worldwise.Service.LoginService;
 
 @RestController
 
-@CrossOrigin(origins = {"https://6596ba94ff0f7907409bcb9e--clever-seahorse-a6828f.netlify.app","http://localhost:5173","https://durgesh4040.github.io/frontend-worlwise"})
+@CrossOrigin(origins = {"https://durgesh4040.github.io/frontend-worlwise"})
 public class Controller {
 	@Autowired
 	private Login loginRepo;
